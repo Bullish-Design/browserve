@@ -45,6 +45,7 @@ build-backend = "hatchling.build"
 packages = ["src/browserve"]
 
 [tool.pytest.ini_options]
+#addopts = "-ra"
 testpaths = ["src/tests"]
 asyncio_mode = "auto"
 markers = [

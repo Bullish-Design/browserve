@@ -23,8 +23,28 @@ from .models.config import (
     ProfileConfig,
     ConfigBase,
 )
+from .events import (
+    EventBase,
+    InteractionEvent,
+    NavigationEvent,
+    NetworkEvent,
+    DOMChangeEvent,
+    EventHandler,
+    EventEmitter,
+    EventFilter,
+    FilterChain,
+    create_event,
+    create_domain_filter,
+    create_action_filter,
+    create_selector_filter,
+    create_event_type_filter,
+    create_exclusion_filter,
+    create_network_filter,
+    create_time_range_filter,
+    global_handler_registry,
+)
 
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 __all__ = [
     # Exception hierarchy
     "BrowserveException",
@@ -42,4 +62,24 @@ __all__ = [
     "LoggingConfig",
     "ProfileConfig", 
     "ConfigBase",
+    
+    # Event system
+    "EventBase",
+    "InteractionEvent",
+    "NavigationEvent",
+    "NetworkEvent", 
+    "DOMChangeEvent",
+    "EventHandler",
+    "EventEmitter",
+    "EventFilter",
+    "FilterChain",
+    "create_event",
+    "create_domain_filter",
+    "create_action_filter",
+    "create_selector_filter",
+    "create_event_type_filter",
+    "create_exclusion_filter",
+    "create_network_filter",
+    "create_time_range_filter",
+    "global_handler_registry",
 ]
