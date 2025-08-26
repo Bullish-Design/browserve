@@ -7,7 +7,7 @@ browser automation tools with comprehensive logging and event tracking.
 
 from __future__ import annotations
 
-from .core import PageBase
+from .core import PageBase, BrowserLogger
 from .exceptions import (
     BrowserveException,
     ValidationError,
@@ -77,6 +77,7 @@ __version__ = "0.1.4"
 __all__ = [
     # Core page interface
     "PageBase",
+    "BrowserLogger",
     # Exception hierarchy
     "BrowserveException",
     "ValidationError",

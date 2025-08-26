@@ -84,8 +84,8 @@ class BrowserLogger:
         output_path: Optional[Path] = None,
         config: Optional[LoggingConfig] = None,
     ):
-        self.output_path = Path(output_path) if output_path else Path("browserve_session.jsonl")
         self.config = config or LoggingConfig()
+        self.output_path = Path(output_path) or self.config.output_path or Path("browserve_session.jsonl")
         self.filters: List[EventFilter] = []
         self.buffer = LogBuffer(max_size=self.config.buffer_size, auto_flush=self.config.auto_flush)
         self._active_pages: Dict[str, "PageBase"] = {}

@@ -1,11 +1,11 @@
+# File: /src/browserve/core/__init__.py
 """
-Core Browserve components for page interaction and session management.
+Core Browserve components for page interaction, session management, and logging.
+"""
 
-Provides the foundational classes for browser automation including
-PageBase for page interaction and future session management components.
-"""
 from __future__ import annotations
 
 from .page import PageBase
+from .logger import BrowserLogger
 
-__all__ = ["PageBase"]
+__all__ = ["PageBase", "BrowserLogger"]
