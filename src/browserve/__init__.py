@@ -6,6 +6,7 @@ browser automation tools with comprehensive logging and event tracking.
 """
 from __future__ import annotations
 
+from .core import PageBase
 from .exceptions import (
     BrowserveException,
     ValidationError,
@@ -43,9 +44,23 @@ from .events import (
     create_time_range_filter,
     global_handler_registry,
 )
+from .utils import (
+    validate_css_selector,
+    validate_xpath_selector,
+    validate_selector,
+    validate_url,
+    sanitize_url,
+    validate_session_id,
+    validate_timeout,
+    sanitize_element_text,
+    validate_action_type,
+)
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 __all__ = [
+    # Core page interface
+    "PageBase",
+    
     # Exception hierarchy
     "BrowserveException",
     "ValidationError",
@@ -82,4 +97,15 @@ __all__ = [
     "create_network_filter",
     "create_time_range_filter",
     "global_handler_registry",
+    
+    # Validation utilities
+    "validate_css_selector",
+    "validate_xpath_selector",
+    "validate_selector",
+    "validate_url",
+    "sanitize_url",
+    "validate_session_id",
+    "validate_timeout", 
+    "sanitize_element_text",
+    "validate_action_type",
 ]
