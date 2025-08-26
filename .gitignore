@@ -9,6 +9,9 @@
 **.env
 **.hidden**
 **.tmuxp**
+.plan**
+**test_output**
+
 
 # C extensions
 *.so

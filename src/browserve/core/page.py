@@ -113,7 +113,7 @@ class PageBase(BaseModel, EventEmitter):
 
         return v.strip()
 
-    async def click(self, selector: str, button: str = "left", timeout: Optional[float] = None, **kwargs: Any) -> None:
+    async def click(self, selector: str, button: str = "left", timeout: Optional[float] = 5, **kwargs: Any) -> None:
         """
         Click element and emit interaction event.
 
